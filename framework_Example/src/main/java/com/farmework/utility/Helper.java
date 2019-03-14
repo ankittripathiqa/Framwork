@@ -17,7 +17,7 @@ public class Helper {
 	
 	public  static String captureScreenShot(WebDriver driver)
 	{
-		//Screen shot
+		//Screen shot taken
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String path=System.getProperty("user.dir")+"/ScreenShot/"+currnetDate() +".png";
 		try {
