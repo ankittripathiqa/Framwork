@@ -65,6 +65,16 @@
 	
 	<build>
 	  <plugins>
+	  
+	 
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+          <configuration>
+            <failOnError>false</failOnError>
+          </configuration>
+        </plugin>
+    
          
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -72,8 +82,14 @@
             <version>3.0.0-M3</version>
             <configuration>
               <suiteXmlFiles>
-                <suiteXmlFile>XMLfile/testng.xml</suiteXmlFile>
+                <suiteXmlFile>XMLfile/${xmlFiles}</suiteXmlFile>
               </suiteXmlFiles>
+              
+              <systemPropertyVariables>
+              <excutionBrowser> ${browser}</excutionBrowser>
+              <excutionBrowser> ${url}</excutionBrowser>
+              
+              </systemPropertyVariables>
             </configuration>
           </plugin>
        </plugins>
