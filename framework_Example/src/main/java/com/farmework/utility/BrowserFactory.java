@@ -6,7 +6,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class BrowserFactory {
@@ -20,6 +22,8 @@ public class BrowserFactory {
 		{
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/Driver/chromedriver");
 			driver=new ChromeDriver();
+		//	DesiredCapabilities capabilitiesChrome = DesiredCapabilities.chrome();
+	    //    ChromeOptions options = new ChromeOptions();
 		}
 		else if(browser.equals("firefox"))
 		{
@@ -33,6 +37,8 @@ public class BrowserFactory {
 		{
 			System.out.println("Not able understand the browser");
 		}
+		
+		 driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 	//	driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
 		driver.get(url);
 		
