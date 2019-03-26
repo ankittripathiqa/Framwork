@@ -33,7 +33,7 @@ public class BrowserFactory {
 		{
 			System.out.println("Not able understand the browser");
 		}
-		driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
+	//	driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
 		driver.get(url);
 		
 	    driver.manage().window().setSize(new Dimension(1366, 768));
