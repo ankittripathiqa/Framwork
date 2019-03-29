@@ -27,6 +27,7 @@ public class BrowserFactory {
 		}
 		else if(browser.equals("firefox"))
 		{
+			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/Driver/geckodriver");
 			driver=new FirefoxDriver();
 		}
 		else if(browser.equals("safari"))
