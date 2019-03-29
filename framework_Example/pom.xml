@@ -86,7 +86,7 @@
               </suiteXmlFiles>
               
               <systemPropertyVariables>
-              <excutionBrowser>chrome</excutionBrowser>
+              <excutionBrowser>${browser}</excutionBrowser>
               <excutionBrowser> ${url}</excutionBrowser>
               
               </systemPropertyVariables>
