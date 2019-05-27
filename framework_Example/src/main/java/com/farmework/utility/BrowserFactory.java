@@ -22,20 +22,9 @@ public class BrowserFactory {
 		if(browser.equals("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/Driver/chromedriver");
-		//	driver=new ChromeDriver();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("disable-gpu");
-			options.addArguments("--disable-features=VizDisplayCompositor");
-			options.addArguments("--incognito"); 
-			options.addArguments("enable-automation"); 
-			options.addArguments("--headless"); 
-			options.addArguments("--no-sandbox"); 
-			options.addArguments("--window-size=1920,1080"); 
-			options.addArguments("--disable-gpu"); 
-			options.addArguments("--disable-extensions");
-			options.addArguments("--dns-prefetch-disable");
-			options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-		     driver = new ChromeDriver(options);
+			driver=new ChromeDriver();
+			
+ 
 		//	DesiredCapabilities capabilitiesChrome = DesiredCapabilities.chrome();
 	    //    ChromeOptions options = new ChromeOptions();
 		}
