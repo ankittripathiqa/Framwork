@@ -25,6 +25,7 @@ public class BrowserFactory {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-features=VizDisplayCompositor");
 			options.addArguments("--no-sandbox");
+			options.setPageLoadStrategy(PageLoadStrategy.NONE);
 			 driver = new ChromeDriver(options);
 			
  
