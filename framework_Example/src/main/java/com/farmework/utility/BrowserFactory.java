@@ -24,6 +24,7 @@ public class BrowserFactory {
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/Driver/chromedriver");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-features=VizDisplayCompositor");
+			options.addArguments("--no-sandbox");
 			 driver = new ChromeDriver(options);
 			
  
