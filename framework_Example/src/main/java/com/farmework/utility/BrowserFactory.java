@@ -23,8 +23,9 @@ public class BrowserFactory {
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/Driver/chromedriver");
 		//	driver=new ChromeDriver();
 			ChromeOptions options = new ChromeOptions();
+			options.addArguments("disable-gpu");
 			options.addArguments("--disable-features=VizDisplayCompositor");
-		   driver = new ChromeDriver(options);
+		     driver = new ChromeDriver(options);
 		//	DesiredCapabilities capabilitiesChrome = DesiredCapabilities.chrome();
 	    //    ChromeOptions options = new ChromeOptions();
 		}
@@ -42,7 +43,7 @@ public class BrowserFactory {
 			System.out.println("Not able understand the browser");
 		}
 		
-		 driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	// driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 	//	driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
 		driver.get(url);
 		
