@@ -21,7 +21,10 @@ public class BrowserFactory {
 		if(browser.equals("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/Driver/chromedriver");
-			driver=new ChromeDriver();
+		//	driver=new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-features=VizDisplayCompositor");
+		   driver = new ChromeDriver(options);
 		//	DesiredCapabilities capabilitiesChrome = DesiredCapabilities.chrome();
 	    //    ChromeOptions options = new ChromeOptions();
 		}
