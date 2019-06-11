@@ -20,19 +20,16 @@ public class LoginPage {
 		
 	}
 	
-	@FindBy(how= How.XPATH,using="//div[contains(text(),'Inicia Sesión')]")
+	@FindBy(how= How.XPATH,using="//div[@id='header-login-modal']")
 	WebElement mouseOver;
 	
-	@FindBy(how=How.XPATH,using="//a[contains(text(),'Inicia sesión')]")
-	WebElement loginBtn;
-	
-	@FindBy(how=How.ID,using="inputEmail")
+	@FindBy(how=How.ID,using="emailAddress")
 	WebElement txtBxUser;
 	
-	@FindBy(how=How.ID,using="loginPassword")
+	@FindBy(how=How.XPATH,using="//input[@name='password']")
 	WebElement txtPwd;
 	
-	@FindBy(how=How.ID,using="loginClick")
+	@FindBy(how=How.XPATH,using="//button/p[contains(text(),'Iniciar sesión')]")
 	WebElement btnLogin;
 	
 	public void login(String username,String pwd)
@@ -40,7 +37,7 @@ public class LoginPage {
 	
 		Actions action=new Actions(driver);
 		action.moveToElement(mouseOver).build().perform();
-		loginBtn.click();
+		mouseOver.click();
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		txtBxUser.sendKeys(username);
 		txtPwd.sendKeys(pwd);
