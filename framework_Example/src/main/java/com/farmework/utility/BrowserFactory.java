@@ -22,16 +22,16 @@ public class BrowserFactory {
 		if(browser.equals("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/Driver/chromedriver");
-			//ChromeOptions options = new ChromeOptions();
+			ChromeOptions options = new ChromeOptions();
 			
-			//driver = new ChromeDriver(options);
-			 DesiredCapabilities capabilities = 
-					 DesiredCapabilities.chrome(); 
-
-					             String[] switches = { "start-maximized" }; 
-					             capabilities.setCapability("chrome.switches", switches); 
-
-					             driver = new ChromeDriver(capabilities); 
+			driver = new ChromeDriver(options);
+//			 DesiredCapabilities capabilities = 
+//					 DesiredCapabilities.chrome(); 
+//
+//					             String[] switches = { "start-maximized" }; 
+//					             capabilities.setCapability("chrome.switches", switches); 
+//
+//					             driver = new ChromeDriver(capabilities); 
 			
  
 		//	DesiredCapabilities capabilitiesChrome = DesiredCapabilities.chrome();
