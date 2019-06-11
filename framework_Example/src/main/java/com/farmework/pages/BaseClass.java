@@ -32,6 +32,7 @@ public class BaseClass {
 	public ExtentReports report;
 	public ExtentTest logger;
 	
+	//BeforeSuite
 	@BeforeSuite
 	public void setupsuit()
 	{
